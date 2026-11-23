@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="grid2 even">
+<section class="panel"><div class="ph"><h2>Appearance</h2></div>
+  <p class="muted">Your choice is saved in this browser.</p>
+  <div class="row mt"><button class="btn ghost" data-theme-set="light">Light mode</button><button class="btn ghost" data-theme-set="dark">Dark mode</button></div></section>
+<section class="panel"><div class="ph"><h2>Application information</h2></div>
+  <table class="tbl"><tbody><tr><td>Application</td><td>NewsHub – Smart News Aggregator and Categorizer</td></tr><tr><td>Version</td><td>1.0</td></tr>
+  {% for k,v in info.items() %}<tr><td>{{ k }}</td><td>{{ v }}</td></tr>{% endfor %}</tbody></table></section>
+</div>
+<section class="panel mt"><div class="ph"><h2>Algorithms in this project</h2></div>
+<div class="tscroll"><table class="tbl"><thead><tr><th>Algorithm</th><th>Where it is used</th><th>Complexity</th></tr></thead><tbody>
+<tr><td>Tree</td><td>Categories page: hierarchy and rolled-up counts</td><td>O(N)</td></tr>
+<tr><td>Trie</td><td>Smart Search: suggestions and article lookup</td><td>O(L) insert, O(P+S) prefix query</td></tr>
+<tr><td>Graph (adjacency list)</td><td>News Network: articles and sources as nodes</td><td>O(n²·k) build</td></tr>
+<tr><td>BFS / DFS</td><td>News Network traversal buttons</td><td>O(V+E)</td></tr>
+<tr><td>Text processing</td><td>Cleaning, tokenizing, stop words, keywords for every fetched article</td><td>O(n)</td></tr>
+<tr><td>Keyword categorizer</td><td>Assigns category and sub-category on fetch</td><td>O(T + C·K)</td></tr>
+<tr><td>Extractive summarizer</td><td>Card summaries for every article</td><td>O(S·W + S log S)</td></tr>
+</tbody></table></div></section>
+{% endblock %}

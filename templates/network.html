@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="net">
+  <section class="panel net-main">
+    <div class="ph"><h2>Article–source graph</h2>
+      <span class="row"><label class="muted" for="limit">Articles</label>
+      <select id="limit"><option>30</option><option selected>50</option><option>80</option></select></span></div>
+    <div class="canvas-wrap"><canvas id="graph"></canvas><div id="gtip" class="gtip" hidden></div></div>
+    <div class="legend" id="legend"></div>
+  </section>
+  <aside class="stack-col">
+    <section class="panel"><div class="ph"><h2>Traversal</h2></div>
+      <p class="muted" id="selInfo">Click a node to choose the start node. Drag nodes to rearrange. Default: the most connected node.</p>
+      <div class="row mt"><button class="btn" id="bfsBtn">Run BFS</button><button class="btn teal" id="dfsBtn">Run DFS</button><button class="btn ghost" id="resetBtn">Reset</button></div></section>
+    <section class="panel"><div class="ph"><h2>Result</h2></div><div id="result" class="muted">Run BFS or DFS to see the visit order, depth and time complexity.</div></section>
+  </aside>
+</div>
+{% endblock %}

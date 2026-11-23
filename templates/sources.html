@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="panel"><div class="ph"><h2>Add RSS source</h2></div>
+  <form id="addForm" class="toolbar flat">
+    <input name="name" placeholder="Source name" required aria-label="Source name">
+    <input name="feed_url" type="url" placeholder="https://example.com/feed.xml" required class="grow" aria-label="Feed URL">
+    <select name="category_hint" aria-label="Category hint"><option value="">Category hint (optional)</option></select>
+    <button class="btn" type="submit">Add source</button>
+  </form></section>
+<section class="panel mt"><div class="ph"><h2>Your sources</h2><button class="btn sm" id="refreshAll">Refresh all</button></div>
+  <div class="tscroll"><table class="tbl"><thead><tr><th>Name</th><th>Feed</th><th>Hint</th><th>Status</th><th>Articles</th><th>Last fetched</th><th>Actions</th></tr></thead><tbody id="srcBody"></tbody></table></div></section>
+{% endblock %}

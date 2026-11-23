@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block head %}<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>{% endblock %}
+{% block content %}
+<div class="grid2 even">
+  <section class="panel"><div class="ph"><h2>Category distribution</h2></div><div class="chart-box"><canvas id="cCat"></canvas></div></section>
+  <section class="panel"><div class="ph"><h2>Articles per source</h2></div><div class="chart-box"><canvas id="cSrc"></canvas></div></section>
+  <section class="panel"><div class="ph"><h2>Collection trend (14 days)</h2></div><div class="chart-box"><canvas id="cTrend"></canvas></div></section>
+  <section class="panel"><div class="ph"><h2>Frequent keywords</h2></div><div class="chart-box"><canvas id="cKw"></canvas></div></section>
+</div>
+{% endblock %}

@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="panel">
+  <input id="sq" class="big-input" type="search" autocomplete="off" autofocus placeholder="Start typing a keyword, e.g. “elec”, “cri”, “clim”…" aria-label="Smart search">
+  <div id="sugg" class="chips mt"></div>
+  <div id="sstats" class="muted mt">Suggestions come from a Trie built over every headline and description. Matching articles are found by intersecting the Trie's article-id sets.</div>
+</section>
+<div id="results" class="news-grid mt"></div>
+{% endblock %}

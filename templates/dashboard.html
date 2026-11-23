@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block head %}<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>{% endblock %}
+{% block content %}
+<div id="banner" class="banner" hidden>Collecting the first batch of articles from your RSS sources… this page updates automatically.</div>
+<section class="stats" id="stats"></section>
+<div class="grid2">
+  <section class="panel"><div class="ph"><h2>Latest news</h2><a href="/news">View all</a></div><div id="latest" class="stack"></div></section>
+  <div class="stack-col">
+    <section class="panel"><div class="ph"><h2>Trending categories</h2><span class="muted">last 24 hours</span></div><div id="trending"></div></section>
+    <section class="panel"><div class="ph"><h2>Category distribution</h2></div><div class="chart-box sm"><canvas id="distChart"></canvas></div></section>
+  </div>
+</div>
+<div class="grid2 even">
+  <section class="panel"><div class="ph"><h2>Most active sources</h2><a href="/sources">Manage</a></div>
+    <table class="tbl"><thead><tr><th>Source</th><th>Status</th><th>Articles</th></tr></thead><tbody id="topSources"></tbody></table></section>
+  <section class="panel"><div class="ph"><h2>Recent articles</h2><a href="/news">View all</a></div>
+    <div class="tscroll"><table class="tbl"><thead><tr><th>Headline</th><th>Category</th><th>Source</th><th></th></tr></thead><tbody id="recent"></tbody></table></div></section>
+</div>
+{% endblock %}

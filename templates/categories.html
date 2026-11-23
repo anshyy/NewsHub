@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% block content %}
+<div id="catCards" class="cat-grid"></div>
+<section class="panel mt"><div class="ph"><h2>Category tree</h2>
+  <span><button class="btn sm ghost" id="expandAll">Expand all</button> <button class="btn sm ghost" id="collapseAll">Collapse all</button></span></div>
+  <p class="muted">A general tree (root → category → sub-category). Counts are rolled up with a post-order DFS. Select a node to browse its articles.</p>
+  <div id="tree" class="tree"></div></section>
+{% endblock %}

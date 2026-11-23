@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="panel toolbar">
+  <input id="q" type="search" placeholder="Search headlines and descriptions" aria-label="Search articles">
+  <select id="fCat" aria-label="Category"><option value="">All categories</option></select>
+  <select id="fSrc" aria-label="Source"><option value="">All sources</option></select>
+  <select id="fSort" aria-label="Sort"><option value="newest">Newest first</option><option value="oldest">Oldest first</option><option value="title">Title A–Z</option><option value="source">Source A–Z</option></select>
+</div>
+<div id="chips"></div><div id="count" class="muted mt"></div>
+<div id="list" class="news-grid"></div><div id="pager" class="pager"></div>
+{% endblock %}
